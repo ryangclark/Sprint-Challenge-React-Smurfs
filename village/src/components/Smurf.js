@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 const Smurf = props => {
   return (
     <div className="Smurf">
@@ -7,7 +9,10 @@ const Smurf = props => {
         className="far fa-trash-alt delete-icon"
         onClick={event => props.handleDeleteClick(event, props.id)}
       />
-      <i className="far fa-edit edit-icon"/>
+      <Link
+        className="far fa-edit edit-icon"
+        to={`/smurf-form/${props.id}`}
+      />
       <h3>{props.name}</h3>
       <strong>{props.height} tall</strong>
       <p>{props.age} smurf years old</p>
