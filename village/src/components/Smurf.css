@@ -9,12 +9,12 @@ h3 {
     margin: 1rem 0;
 }
 
-.delete-icon {
+.delete-icon, .edit-icon {
     float: right;
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
 }
 
-.delete-icon:hover {
+.delete-icon:hover, .edit-icon:hover {
     font-weight: 600;
 }
 
@@ -22,7 +22,7 @@ h3 {
     background: rgba(0,0,0,0.1);
     margin: 1rem 0;
     padding: 0.5rem 0.5rem 1rem 1rem;
-    width: 15rem;
+    width: 20rem;
 }
 
 .Smurfs {

@@ -8,19 +8,23 @@ class SmurfForm extends Component {
     this.state = {
       name: '',
       age: '',
-      height: ''
+      height: '',
+      currentSmurf: {}
     };
   }
 
   addSmurf = event => {
     event.preventDefault();
+    
     // add code to create the smurf using the api
     axios
       .post('http://localhost:3333/smurfs',
       {name: this.state.name, age: this.state.age, height: this.state.height})
-      .then(response => console.log(response))
-      .then(this.props.fetchSmurfs())
+      // .then(response => console.log(response))
+      .then(this.props.fetchSmurfs)
+      .then(this.props.history.push('/'))
       .catch(error => console.log("POST ERROR:", error));
+    
     // reset form via state
     this.setState({
       name: '',
@@ -32,6 +36,30 @@ class SmurfForm extends Component {
   handleInputChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('prevState:', prevState);
+    console.log('prevProps', prevProps);
+    if (this.props.match.params.id)
+      if (!this.state.currentSmurf.id) {
+        console.log('(!this.state.currentSmurf.id) running');
+      } // else if ()
+    // if (
+    //   //ensure we have a dynamic route, AND one of the following
+    //   this.props.match.params.id && 
+    //   (
+    //     //if this.state doesn't have currentSmurf, get it
+    //     (!this.state.currentSmurf.id) 
+    //   || // OR
+    //     //if the dynamic route doesn't match the state currentSmurf, get it
+    //     (this.state.currentSmurf.id !== this.props.match.params.id)
+    //   )
+    // ) {
+    //     this.setState({
+    //       currentSmurf: this.props.smurfs.find(smurf => smurf.id )
+    //     })
+    //   };
+    }
 
   render() {
     return (
