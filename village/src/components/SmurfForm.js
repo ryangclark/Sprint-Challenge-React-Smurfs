@@ -9,8 +9,9 @@ class SmurfForm extends Component {
       name: '',
       age: '',
       height: '',
-      currentSmurf: {}
+      currentSmurf: {},
     };
+    // console.log(props.smurfs);
   }
 
   addSmurf = event => {
@@ -37,29 +38,14 @@ class SmurfForm extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  componentDidUpdate(prevProps, prevState) {
-    console.log('prevState:', prevState);
-    console.log('prevProps', prevProps);
-    if (this.props.match.params.id)
-      if (!this.state.currentSmurf.id) {
-        console.log('(!this.state.currentSmurf.id) running');
-      } // else if ()
-    // if (
-    //   //ensure we have a dynamic route, AND one of the following
-    //   this.props.match.params.id && 
-    //   (
-    //     //if this.state doesn't have currentSmurf, get it
-    //     (!this.state.currentSmurf.id) 
-    //   || // OR
-    //     //if the dynamic route doesn't match the state currentSmurf, get it
-    //     (this.state.currentSmurf.id !== this.props.match.params.id)
-    //   )
-    // ) {
-    //     this.setState({
-    //       currentSmurf: this.props.smurfs.find(smurf => smurf.id )
-    //     })
-    //   };
+  componentDidUpdate(prevProps) {
+    if (this.props.smurfs !== prevProps.smurfs) {
+      this.setState({
+        currentSmurf: this.props.smurfs.find(smurf => 
+          `${smurf.id}` === this.props.match.params.id)
+      });
     }
+  }
 
   render() {
     return (
