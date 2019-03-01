@@ -20,6 +20,10 @@ class App extends Component {
   // You'll need to make sure you have the right properties on state and pass them down to props.
 
   componentDidMount() {
+    this.fetchSmurfs();
+  }
+
+  fetchSmurfs = () => {
     axios
       .get('http://localhost:3333/smurfs')
       .then(response => this.setState({
@@ -38,7 +42,12 @@ class App extends Component {
             <Smurfs {...props} smurfs={this.state.smurfs} />
           }
         />
-        <Route path="/smurf-form" component={SmurfForm} />
+        <Route
+          path="/smurf-form"
+          render={props =>
+            <SmurfForm {...props} fetchSmurfs={this.fetchSmurfs} />
+          }
+        />
       </div>
     );
   }
