@@ -43,13 +43,13 @@ Follow these steps to set up and work on your project:
 - [x] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
 - [x] Implement the project on this Branch, committing changes regularly.
 - [x] Push commits: git push origin `<firstName-lastName>`.
-- [ ] **RUN** `yarn install or npm install` at the root to retrieve all the dependencies for the node server. You will not need to create any react apps here nor will you need to install any other dependencies. You should have all you need in this repo.
-- [ ] **LOOK** at all the files you've been given for this project. One important file to note is `server.js`. This file contains an **API** that you are going to be interfacing with. Below is documentation on how to interact with the **API**.
-- [ ] **RUN** `yarn start or npm start` to get your API up and running on `http://localhost:3333`. This is the **URL** you're going to need to use within your React app in order to make AJAX requests for data.
-- [ ] After your API is up and running, you can open chrome and type in `http://localhost:3333/smurfs`. You should see an Array `[]` with a smurf returned to you. This is an array that your **API** will be using to store our Smurf Data.
-- [ ] **LOOK** at your `village` directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
-- [ ] **cd** into `village` and run `yarn install or npm install` to retrieve the client side dependencies.
-- [ ] **RUN** `yarn start or npm start` to fire up your React application.
+- [x] **RUN** `yarn install or npm install` at the root to retrieve all the dependencies for the node server. You will not need to create any react apps here nor will you need to install any other dependencies. You should have all you need in this repo.
+- [x] **LOOK** at all the files you've been given for this project. One important file to note is `server.js`. This file contains an **API** that you are going to be interfacing with. Below is documentation on how to interact with the **API**.
+- [x] **RUN** `yarn start or npm start` to get your API up and running on `http://localhost:3333`. This is the **URL** you're going to need to use within your React app in order to make AJAX requests for data.
+- [x] After your API is up and running, you can open chrome and type in `http://localhost:3333/smurfs`. You should see an Array `[]` with a smurf returned to you. This is an array that your **API** will be using to store our Smurf Data.
+- [x] **LOOK** at your `village` directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
+- [x] **cd** into `village` and run `yarn install or npm install` to retrieve the client side dependencies.
+- [x] **RUN** `yarn start or npm start` to fire up your React application.
 
 Follow these steps for completing your project:
 
@@ -84,11 +84,11 @@ Construct your Components to build a Single Page Application. Keep your componen
 
 Add a Router to this application by using React Router.
 
-- [ ] You'll start by wrapping your `root` component in the `Router` component.
-- [ ] Declare your routes with `Route`.
-- [ ] Then make it so you can navigate to your routes using `Link`.
-- [ ] Create two `routes` in your `App` component, one at `'/'` for your `Smurfs` component,and one at `/smurf-form` for your form.
-- [ ] Then in your `App` component, create a nav bar that will use `NavLink` to route to your different pages.
+- [x] You'll start by wrapping your `root` component in the `Router` component.
+- [x] Declare your routes with `Route`.
+- [x] Then make it so you can navigate to your routes using `Link`.
+- [x] Create two `routes` in your `App` component, one at `'/'` for your `Smurfs` component,and one at `/smurf-form` for your form.
+- [x] Then in your `App` component, create a nav bar that will use `NavLink` to route to your different pages.
 
 ## STRETCH PROBLEMS
 

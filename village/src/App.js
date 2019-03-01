@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 
 import './App.css';
+import Navigation from './components/Navigation';
 import SmurfForm from './components/SmurfForm';
 import Smurfs from './components/Smurfs';
 
@@ -17,8 +19,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SmurfForm />
-        <Smurfs smurfs={this.state.smurfs} />
+        <Navigation />
+        <Route 
+          exact
+          path="/"
+          render={props => 
+            <Smurfs {...props} smurfs={this.state.smurfs} />
+          }
+        />
+        <Route path="/smurf-form" component={SmurfForm} />
       </div>
     );
   }
