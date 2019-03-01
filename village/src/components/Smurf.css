@@ -14,6 +14,7 @@ h3 {
 }
 
 .delete-icon, .edit-icon {
+    cursor: pointer;
     float: right;
     padding: 1rem 0.5rem;
 }
