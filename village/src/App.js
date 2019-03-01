@@ -31,6 +31,17 @@ class App extends Component {
       })).catch(error => console.log(error));
   }
 
+  handleDeleteClick = (event, smurfId) => {
+    event.preventDefault();
+    // axios call
+    axios
+      .delete(`http://localhost:3333/smurfs/${smurfId}`)
+      .then(response => this.setState({
+        smurfs: response.data
+      }))
+      .catch(error => console.log("DELETE ERROR:", error))
+  }
+
   render() {
     return (
       <div className="App">
@@ -39,7 +50,11 @@ class App extends Component {
           exact
           path="/"
           render={props => 
-            <Smurfs {...props} smurfs={this.state.smurfs} />
+            <Smurfs
+              {...props}
+              handleDeleteClick={this.handleDeleteClick}
+              smurfs={this.state.smurfs}
+            />
           }
         />
         <Route

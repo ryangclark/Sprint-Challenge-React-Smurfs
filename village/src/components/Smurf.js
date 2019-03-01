@@ -3,6 +3,10 @@ import React from 'react';
 const Smurf = props => {
   return (
     <div className="Smurf">
+      <i
+        class="far fa-trash-alt delete-icon"
+        onClick={event => props.handleDeleteClick(event, props.id)}
+      />
       <h3>{props.name}</h3>
       <strong>{props.height} tall</strong>
       <p>{props.age} smurf years old</p>
