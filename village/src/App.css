@@ -2,15 +2,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  text-align: center;
-  max-width: 75vw;
-}
-
-nav {
+  /* text-align: center; */
   width: 100%;
-}
-
-nav > a {
-  padding: 1rem;
-  margin: 1rem;
 }

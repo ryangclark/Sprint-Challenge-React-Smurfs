@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 
 import Smurf from './Smurf';
+import './Smurf.css';
 
 class Smurfs extends Component {
+  constructor(props) {
+    super(props)
+  }
   render() {
     return (
       <div className="Smurfs">
