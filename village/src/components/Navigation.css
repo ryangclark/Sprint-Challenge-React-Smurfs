@@ -1,0 +1,23 @@
+nav {
+    background: rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+  
+nav > a {
+    color: inherit;
+    padding: 1rem;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    font-weight: bold;
+}
+
+nav > a.active {
+    /* font-weight: bold; */
+    text-decoration: underline;
+}
